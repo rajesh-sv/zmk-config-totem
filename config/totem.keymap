@@ -38,6 +38,125 @@
         };
     };
 
+    behaviors {
+        n4_shift_dot: n4_shift_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N4_SHIFT_DOT";
+            bindings = <&kp NUMBER_4>, <&kp DOT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n5_shift_comma: n5_shift_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N5_SHIFT_COMMA";
+            bindings = <&kp NUMBER_5>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n6_shift_colon: n6_shift_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N6_SHIFT_COLON";
+            bindings = <&kp NUMBER_6>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n8_shift_pipe: n8_shift_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N8_SHIFT_PIPE";
+            bindings = <&kp NUMBER_8>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n9_shift_tilde: n9_shift_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N9_SHIFT_TILDE";
+            bindings = <&kp NUMBER_9>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n0_shift_caret: n0_shift_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N0_SHIFT_CARET";
+            bindings = <&kp NUMBER_0>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        colon_shift_at: colon_shift_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_SHIFT_AT";
+            bindings = <&kp COLON>, <&kp AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        comma_shift_hash: comma_shift_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SHIFT_HASH";
+            bindings = <&kp COMMA>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_shift_star: dot_shift_star {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_SHIFT_STAR";
+            bindings = <&kp DOT>, <&kp STAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        sqt_shift_grave: sqt_shift_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SQT_SHIFT_GRAVE";
+            bindings = <&kp SQT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        underscore_shift_bslh: underscore_shift_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORE_SHIFT_BSLH";
+            bindings = <&kp UNDERSCORE>, <&kp BSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        minus_shift_bslh: minus_shift_bslh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_SHIFT_BSLH";
+            bindings = <&kp MINUS>, <&kp BSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        equal_shift_equal: equal_shift_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUAL_SHIFT_EQUAL";
+            bindings = <&kp EQUAL>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -60,10 +179,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q           &kp W       &kp F        &kp P        &kp B        &kp J        &kp L            &kp U        &kp Y       &kp COLON
-                &mt LEFT_ALT A  &mt LGUI R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E  &mt RGUI I  &mt RALT O
-&kp UNDERSCORE  &kp Z           &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SQT
-                                            &lt 3 TAB    &lt 1 SPACE  &lt 2 ESC    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
+                        &kp Q           &kp W       &kp F        &kp P        &kp B        &kp J        &kp L            &kp U              &kp Y            &colon_shift_at
+                        &mt LEFT_ALT A  &mt LGUI R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M        &mt RSHFT N      &mt RCTRL E        &mt RGUI I       &mt RALT O
+&underscore_shift_bslh  &kp Z           &kp X       &kp C        &kp D        &kp V        &kp K        &kp H            &comma_shift_hash  &dot_shift_star  &kp FSLH         &sqt_shift_grave
+                                                    &lt 3 TAB    &lt 1 SPACE  &lt 2 ESC    &lt 2 ENTER  &lt 1 BACKSPACE  &lt 3 DEL
             >;
         };
 
@@ -86,10 +205,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp PLUS      &kp NUMBER_9  &kp NUMBER_8  &kp NUMBER_7  &kp ASTRK        &kp AMPS       &kp EXCL      &kp LPAR        &kp RPAR       &kp SEMI
-           &kp NUMBER_0  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp EQUAL        &kp PIPE       &mt LSHFT LT  &mt LCTRL LBKT  &mt LGUI RBKT  &mt LALT GT
-&kp MINUS  &kp PRCNT     &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4  &kp FSLH         &kp TILDE      &kp DLLR      &kp LBRC        &kp RBRC       &kp CARET    &kp DQT
-                                       &kp ENTER     &kp SPACE     &kp BACKSPACE    &kp BACKSPACE  &kp SPACE     &kp ENTER
+                   &kp PLUS         &n9_shift_tilde  &n8_shift_pipe   &kp NUMBER_7   &kp ASTRK             &kp AMPS       &kp EXCL      &kp LPAR        &kp RPAR       &kp SEMI
+                   &n0_shift_caret  &kp NUMBER_3     &kp NUMBER_2     &kp NUMBER_1   &equal_shift_equal    &kp PIPE       &mt LSHFT LT  &mt LCTRL LBKT  &mt LGUI RBKT  &mt LALT GT
+&minus_shift_bslh  &kp PRCNT        &n6_shift_colon  &n5_shift_comma  &n4_shift_dot  &kp FSLH              &kp TILDE      &kp DLLR      &kp LBRC        &kp RBRC       &kp CARET    &kp DQT
+                                                     &kp ENTER        &kp SPACE      &kp BACKSPACE         &kp BACKSPACE  &kp SPACE     &kp ENTER
             >;
         };
 
